@@ -42,10 +42,8 @@ public class StringCheck {
             for (char ch : name.toCharArray()) {
                 chars.add(ch);
             }
-            chars = chars.stream()
-                    .sorted()
-                    .collect(Collectors.toList());
             deserializedNameList.add(chars.stream()
+                    .sorted()
                     .map(String::valueOf)
                     .collect(Collectors.joining()));
             chars.clear();
